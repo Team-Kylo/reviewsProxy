@@ -18,7 +18,7 @@ app.get('/reviews/:id', (req, res) => {
       }
     })
 })
-app.get('additional/:id', (req, res) => {
+app.get('/additional/:id', (req, res) => {
   const id = req.params.id;
   axios.get(`http://localhost:3004/additional/${id}`)
   .then((resp) => {
