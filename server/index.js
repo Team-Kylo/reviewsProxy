@@ -48,6 +48,19 @@ app.get('/products/:id', (req, res) => {
   })
 })
 
+app.get('/carousel/:id', (req, res) => {
+  const id = req.params.id;
+  axios.get(`http://localhost:3001/carousel/${id}`)
+  .then((resp) => {
+    res.status(200).json(resp.data);
+  })
+  .catch((err) => {
+    if (err) {
+      console.log(err);
+    }
+  })
+})
+
 app.listen(process.env.PORT, () => {
   console.log(`Tuning in on port ${process.env.PORT}`)
 })

@@ -1,12 +1,29 @@
-#productDetails {
-  float: right;
-  padding-right: 50px;
+#productPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#reviews {
-  padding: 545px 0 0 25px;
+#allButAdd {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#productDetails {
+}
+
+#imageAndReviews {
+ flex-direction: column;
+ padding-right: 400px;
 }
 
 #additionalItems {
-  padding-top: 15px;
+ display: flex;
+ justify-content: center;
+ padding-top: 25px;
+}
+
+#reviews {
+  padding-top: 25px;
 }
