@@ -9,7 +9,7 @@ app.use(express.static('./public'));
 // route for reviews data
 app.get('/reviews/:id', (req, res) => {
   const id = req.params.id;
-  axios.get(`http://localhost:3005/reviews/${id}`)
+  axios.get(`http://ec2-3-14-246-138.us-east-2.compute.amazonaws.com/reviews/${id}`)
     .then((resp) => {
       res.status(200).json(resp.data);
     })
@@ -23,7 +23,7 @@ app.get('/reviews/:id', (req, res) => {
 // route for additional products by seller
 app.get('/additional/:id', (req, res) => {
   const id = req.params.id;
-  axios.get(`http://localhost:3004/additional/${id}`)
+  axios.get(`http://ec2-3-133-117-113.us-east-2.compute.amazonaws.com/additional/${id}`)
   .then((resp) => {
     res.status(200).json(resp.data);
   })
@@ -35,9 +35,9 @@ app.get('/additional/:id', (req, res) => {
 })
 
 // route for product and seller info
-app.get('/products/:id', (req, res) => {
+app.get('/details/:id', (req, res) => {
   const id = req.params.id;
-  axios.get(`http://localhost:3003/products/${id}`)
+  axios.get(`http://ec2-18-220-152-98.us-east-2.compute.amazonaws.com/details/${id}`)
   .then((resp) => {
     res.status(200).json(resp.data);
   })
